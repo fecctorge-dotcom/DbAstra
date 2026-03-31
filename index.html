@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Bot Astra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .token-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .token-label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .token-value {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            word-break: break-all;
+            border: 1px solid #ddd;
+            color: #764ba2;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background: #e8f5e9;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .status-badge {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4caf50;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Astra Bot Dashboard</h1>
+        <div class="subtitle">Telegram Bot Manager</div>
+
+        <div class="token-box">
+            <span class="token-label">📌 Bot Token (Development)</span>
+            <div class="token-value" id="tokenDisplay">•••••••••••••••••••••</div>
+        </div>
+
+        <div class="status">
+            <span>✅ Bot Status</span>
+            <span style="color:#4caf50; font-weight:bold;">Online</span>
+            <div class="status-badge"></div>
+        </div>
+
+        <button onclick="alert('Untuk keamanan, token tidak ditampilkan di web. Gunakan environment variable di server.')">
+            🔒 Hubungkan ke Bot
+        </button>
+
+        <div class="footer">
+            ⚠️ Token disimpan di server, bukan di halaman ini
+        </div>
+    </div>
+
+    <script>
+        // Catatan: Jangan pernah simpan token asli di file HTML!
+        // Ini cuma contoh frontend. Token asli harus disimpan di server (Node.js/PHP/Python)
+        console.log("Dashboard berjalan - Token tidak ditampilkan untuk keamanan");
+    </script>
+</body>
+  </html>
